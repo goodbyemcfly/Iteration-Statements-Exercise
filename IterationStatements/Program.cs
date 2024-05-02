@@ -34,7 +34,6 @@
                  Console.WriteLine($"{userInput1} DOES NOT equal {userInput2}");
             }
         }
-        
         // Method #4 - Write a method to check whether a given number is even or odd - DONE
         static void EvenOrOdd(decimal userInput)
         {
@@ -47,7 +46,6 @@
                 Console.WriteLine($"{userInput} is NOT an even number");
             }
         }
-        
         // Method #5 - Write a method to check whether a given number is positive or negative - DONE
         static void PositiveOrNegatvie(int userInput3)
         {
@@ -60,7 +58,6 @@
                 Console.WriteLine($"{userInput3} is a POSITIVE number.");
             }
         }
-        
         // Method #6 - Write a method to read the age of a candidate and determine whether they can vote. - DONE
         static void CanYouVote(int userAge)
         {
@@ -74,29 +71,47 @@
                 Console.WriteLine("Congratulations! You are old enough to vote!");
             }
         }
-       
         //Heatin Up Section:
-        //Write a method to check if an integer(from the user) is in the range -10 to 10
-        
-        //Write a method to display the multiplication table(from 1 to 12) of a given integer
 
+        // Method #7 - Write a method to check if an integer(from the user) is in the range -10 to 10
+        static void BetweenTenAndNegativeTen(int userInt)
+        {
+            if (userInt < 11 &&  userInt > -11)
+            {
+                Console.WriteLine("The number you have chosen IS between 10 and -10!");
+            }
+            else
+            {
+                Console.WriteLine("Sorry, the number you have chosen is NOT between 10 and -10");
+            }
+        }
+        // Method #8 - Write a method to display the multiplication table(from 1 to 12) of a given integer
+        static void MultiplicationTable(int userNumber)
+        {
+            int multiplyBy = 1;
+            while (multiplyBy <= 12)
+            {
+                Console.WriteLine($"{userNumber} x {multiplyBy} = " + userNumber * multiplyBy);
+                multiplyBy++;
+            }
+        }
 
         //Call the methods to test them in the Main method below
         static void Main(string[] args)
         {
             //LukeWarm Section:
 
-            // method #1
+            // Method #1
             int number = 0;
             Console.WriteLine("This method will list the numbers 1 - 100");
             ListNumbers(number);
 
-            // method #2
+            // Method #2
             number = 0;
             Console.WriteLine("This method will list the numbers 3 - 999 by 3's");
             ListByThree(number);
 
-            // method #3
+            // Method #3
             Console.WriteLine("This method will test if two numbers are equal. Please enter the first number");
             var userInput1 = int.Parse(Console.ReadLine());
 
@@ -105,20 +120,32 @@
 
             AreTheyEqual(userInput1, userInput2);
 
-            // method #4
+            // Method #4
             Console.WriteLine("This method will test if a number is odd or even. Please enter a number");
             var userInput = Convert.ToDecimal(Console.ReadLine());
             EvenOrOdd(userInput);
 
-            // method #5
+            // Method #5
             Console.WriteLine("This method will test if a number is positive or negative. Please enter a number");
             var userInput3 = int.Parse(Console.ReadLine());
             PositiveOrNegatvie(userInput3);
 
-            // method #6
+            // Method #6
             Console.WriteLine("This method will test if you are old enough to vote. Please enter your age");
             var userAge = int.Parse(Console.ReadLine());
             CanYouVote(userAge);
+
+            // Heatin' Up Section:
+
+            // Method #7 
+            Console.WriteLine("This method will test if a number is between 10 and -10. Please enter a number.");
+            int userInt = int.Parse(Console.ReadLine());
+            BetweenTenAndNegativeTen(userInt);
+
+            // Method #8
+            Console.WriteLine("This method will give you the multiplication table of any given number. Please enter a number below.");
+            int userNumber = int.Parse(Console.ReadLine());
+            MultiplicationTable(userNumber);
         }
     }
 }
