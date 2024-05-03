@@ -102,8 +102,8 @@
             //LukeWarm Section:
 
             // Method #1
-            int number = 0;
-            Console.WriteLine("This method will list the numbers 1 - 1000");
+            int number = -1001;
+            Console.WriteLine("This method will list the numbers -1000 - 1000");
             ListNumbers(number);
 
             // Method #2
