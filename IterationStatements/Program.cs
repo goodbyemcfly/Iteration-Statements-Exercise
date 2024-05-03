@@ -7,7 +7,7 @@
         // Method #1 - Write a method that will print to the console all numbers 1000 through - 1000 - DONE
         static void ListNumbers(int number)
         {
-            while (number < 100)
+            while (number < 1000)
             {
                 number++;
                 Console.WriteLine(number);
@@ -103,7 +103,7 @@
 
             // Method #1
             int number = 0;
-            Console.WriteLine("This method will list the numbers 1 - 100");
+            Console.WriteLine("This method will list the numbers 1 - 1000");
             ListNumbers(number);
 
             // Method #2
